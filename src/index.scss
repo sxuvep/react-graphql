@@ -1,0 +1,102 @@
+$font-family: 'Indie Flower', cursive, 'Roboto', sans-serif;
+$bold: 800;
+$semi: 600;
+$light: 400;
+
+body {
+	margin: 20px auto;
+	font-family: $font-family;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: #eee;
+	padding: 20px;
+}
+
+.Overview {
+	font-family: $font-family;
+	font-weight: $bold;
+	width: 60%;
+	padding: 15px;
+	margin: 10px auto;
+	background: lightgoldenrodyellow;
+	display: flex;
+	flex-direction: Column;
+	justify-content: center;
+	align-items: space-between;
+}
+.Header {
+	font-size: 30px;
+	font-weight: $bold;
+	font-style: italic;
+	color: peru;
+}
+.Genre {
+	font-weight: $bold;
+	color: teal;
+}
+.Author-Name {
+	font-size: 14px;
+	font-weight: $semi;
+}
+
+.booksContainer {
+	display: flex;
+	justify-content: space-between;
+}
+
+.book-list {
+	margin: auto;
+}
+.book-details {
+	margin: auto;
+	align-items: flex-start;
+}
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	grid-gap: 1rem;
+}
+
+ol {
+	counter-reset: orderedlist;
+	li {
+		font-family: 'Indie Flower', cursive;
+		font-weight: 600;
+		font-size: 1.5em;
+		cursor: pointer;
+		transition: all 0.2s;
+		background-size: cover;
+		&::before {
+			font-family: 'Indie Flower', cursive;
+			counter-increment: orderedlist;
+			content: counter(orderedlist);
+			font-size: 1em;
+			line-height: 0.75;
+			width: 2rem;
+			padding: 0.25rem;
+			padding-top: 0.15rem;
+			padding-bottom: 0.15rem;
+			margin-right: 0.5rem;
+			text-align: center;
+			color: #fff;
+			background-color: purple;
+			border-radius: 0.25em;
+		}
+		&:hover {
+			background-color: orange;
+
+			transform: scale(1.2);
+		}
+		&:active,
+		&:visited {
+			color: red;
+		}
+	}
+}
+
+.form {
+	margin-top: 50px;
+}
