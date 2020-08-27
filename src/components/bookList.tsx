@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useQuery, gql } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import { getBooksQuery } from '../graphQueries/queries';
 import BookDetails from './bookDetails';
 
